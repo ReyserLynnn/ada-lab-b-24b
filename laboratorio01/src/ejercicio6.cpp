@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-void mostrarArray(const char array[], int size, const std::string &name)
+void printArray(const char array[], int size, const std::string &name)
 {
   std::cout << name << " = [";
   for (int i = 0; i < size; ++i)
@@ -22,8 +22,8 @@ int main()
   int size2 = sizeof(array2) / sizeof(array2[0]);
 
   printf("\n");
-  mostrarArray(array1, size1, "A1");
-  mostrarArray(array2, size2, "A2");
+  printArray(array1, size1, "A1");
+  printArray(array2, size2, "A2");
 
   char *array3 = new char[size1 + size2];
 
@@ -37,7 +37,7 @@ int main()
     array3[size1 + i] = array2[i];
   }
 
-  mostrarArray(array3, size1 + size2, "A3");
+  printArray(array3, size1 + size2, "A3");
 
   delete[] array3;
   printf("\n\n");
